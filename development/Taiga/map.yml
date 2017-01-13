@@ -1,0 +1,148 @@
+YAML-DO-NOT-TOUCH: cy;proto=1.0
+
+authors: [TheMolkaPL]
+version: 1.0
+objective: 'Zniszcz monument przeciwnej druzyny'
+teams:
+  -OBS:
+    spawns:
+      1:
+        x: 0.5
+        y: 35
+        z: 0.5
+        yaw: 0
+  Blue:
+    friendly: true
+    slots: 6
+    spawns:
+      1:
+        x: 0.5
+        y: 2
+        z: -65.5
+        yaw: 0
+    color: BLUE
+    kits:
+      begin: [blue-armor, start-items]
+      join: [blue-armor, start-items]
+      respawn: [blue-armor, start-items]
+  Red:
+    friendly: true
+    slots: 6
+    spawns:
+      1:
+        x: 0.5
+        y: 2
+        z: 65.5
+        yaw: 180
+    color: RED
+    kits:
+      begin: [red-armor, start-items]
+      join: [red-armor, start-items]
+      respawn: [red-armor, start-items]
+kits:
+  blue-armor:
+    items:
+      helmet:
+        id: 298
+        slot: 39
+        data:
+          leather-color: BLUE
+      chestplate:
+        id: 299
+        slot: 38
+        data:
+          leather-color: BLUE
+      leggins:
+        id: 300
+        slot: 37
+        data:
+          leather-color: BLUE
+      boots:
+        id: 301
+        slot: 36
+        data:
+          leather-color: BLUE
+  red-armor:
+    items:
+      helmet:
+        id: 298
+        slot: 39
+        data:
+          leather-color: RED
+      chestplate:
+        id: 299
+        slot: 38
+        data:
+          leather-color: RED
+      leggins:
+        id: 300
+        slot: 37
+        data:
+          leather-color: RED
+      boots:
+        id: 301
+        slot: 36
+        data:
+          leather-color: RED
+  start-items:
+    items:
+      sword:
+        id: 272
+      bow:
+        id: 261
+        enchantments:
+        - infinity-1
+      pickaxe:
+        id: 278
+      clay-1:
+        id: 159
+        amount: 64
+      clay-2:
+        id: 159
+        amount: 64
+      glass:
+        id: 95
+        amount: 8
+      ladder:
+        id: 65
+        amount: 32
+      bread:
+        id: 297
+        amount: 16
+      water-bucket:
+        id: 326
+      arrows:
+        id: 262
+        amount: 1
+        slot: 9
+modules:
+  death-messages: true
+  destroyable:
+    blocks:
+      # Blue
+      Monument:
+        mode: STATIC_SILENT
+        objective: 100
+        owner: 'Blue'
+        monuments:
+        - '0;5;-33'
+      # Red
+      Monument :
+        mode: STATIC_SILENT
+        objective: 100
+        owner: 'Red'
+        monuments:
+        - '0;5;33'
+  disable-mob-spawning: true
+  game-rule:
+    game-rules:
+      doDaylightCycle: false
+      doTileDrops: false
+  playable-area:
+    message: 'default'
+    x-max: 20
+    y-max: 19
+    z-max: 53
+    x-min: -20
+    y-min: 0
+    z-min: -53

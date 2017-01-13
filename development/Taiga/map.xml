@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+    <name>Taiga</name>
+    <version>1.0</version>
+    <description>Zniszcz monument przeciwnej druzyny</description>
+    <authors>
+        <author>TheMolkaPL</author>
+    </authors>
+
+    <world difficulty="easy" environment="normal" pvp="true">
+        <spawn x="0.5" y="35" z="0.5" />
+    </world>
+</map>

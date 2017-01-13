@@ -1,0 +1,4 @@
+# Arcade repository settings
+define MapRepository
+import development/ -environment "development"
+import production/
